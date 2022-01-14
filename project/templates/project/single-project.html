@@ -1,0 +1,40 @@
+
+{% extends 'main.html' %}
+
+
+
+{% block content %}
+
+
+<h3>Firstname: {{projectObj.first_name}}</h3>
+<h3>Lastname: {{projectObj.last_name}}</h3>
+<h3>Email: {{projectObj.your_email}}</h3>
+<h3>Created: {{projectObj.created}}</h3>
+<h3>{{projectObj.id}}</h3>
+
+
+
+
+<a href="{%url 'projects'%}">Back</a>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+

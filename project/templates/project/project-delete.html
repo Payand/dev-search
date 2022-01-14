@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+
+
+
+{% block content %}
+
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h4>Are you sure you want ti delete "{{object}}"</h4>
+        <button type='button' onclick='location.href="{% url 'projects'%}"'>go back</button>
+        <input type="submit" value='Confirm'/>
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+{% extends 'main.html' %}
+
+
+
+{% block content %}
+ <h2>People info</h2>
+ 
+
+    <table>
+        <tr>
+            <th>id</th>
+            <th>joined in</th>
+
+        </tr>
+        
+        {% for project in projects %}
+            <tr>
+                <td>{{project.id_name}}</td>
+                <td>{{project.created}}</td>
+                <td><a href="{% url 'single-project' project.id %}">View</a></td>
+                <td><a href="{% url 'update-project' project.id %}">update</a></td>
+                <td><a href="{% url 'delete-project' project.id %}">Delete</a></td>
+            </tr>    
+        {% endfor %}
+        <p><a href="{% url 'add-project'%}">Add information</a></p>
+    </tabel>
+    
+   
+
+
+
+
+
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
